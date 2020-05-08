@@ -1,7 +1,7 @@
 module Main where
 
-import qualified Refextras.Main
 import Prelude
+import qualified Refextras.Main
 
 main :: IO ()
 main = Refextras.Main.main

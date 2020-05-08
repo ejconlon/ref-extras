@@ -13,30 +13,18 @@ description: Please see the README on GitHub at <https://github.com/ejconlon/ref
 
 dependencies:
 - base >= 4.12 && < 5
+- little-rio >= 0.1.1
+- microlens >= 0.4
+- stm >= 2.5
+- unliftio >= 0.2
+- unliftio-core >= 0.1
 
 default-extensions:
-  - ConstraintKinds
-  - DataKinds
-  - DeriveFunctor
-  - DeriveFoldable
-  - DeriveGeneric
-  - DeriveTraversable
-  - FlexibleContexts
-  - FlexibleInstances
-  - FunctionalDependencies
-  - GADTs
-  - GeneralizedNewtypeDeriving
-  - KindSignatures
-  - LambdaCase
-  - MultiParamTypeClasses
-  - MultiWayIf
-  - NoImplicitPrelude
-  - OverloadedStrings
-  - Rank2Types
-  - TemplateHaskell
-  - TupleSections
-  - TypeApplications
-  - TypeFamilies
+- FlexibleInstances
+- GADTs
+- MultiParamTypeClasses
+- Rank2Types
+
 
 ghc-options:
 - -Wall
@@ -50,28 +38,3 @@ ghc-options:
 
 library:
   source-dirs: src
-
-executables:
-  ref-extras-exe:
-    main:                Main.hs
-    source-dirs:         app
-    ghc-options:
-    - -threaded
-    - -rtsopts
-    - -with-rtsopts=-N
-    dependencies:
-    - ref-extras
-
-tests:
-  ref-extras-test:
-    main:                Tasty.hs
-    source-dirs:         test
-    ghc-options:
-    - -threaded
-    - -rtsopts
-    - -with-rtsopts=-N
-    dependencies:
-    - ref-extras
-    - tasty
-    - tasty-discover
-    - tasty-hunit
