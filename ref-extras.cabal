@@ -1,0 +1,69 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.33.0.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 432738682fc314a1d40171cebf995895426712cbe4c289143399f645470a1214
+
+name:           ref-extras
+version:        0.1.0
+description:    Please see the README on GitHub at <https://github.com/ejconlon/ref-extras#readme>
+homepage:       https://github.com/ejconlon/ref-extras#readme
+bug-reports:    https://github.com/ejconlon/ref-extras/issues
+author:         Eric Conlon
+maintainer:     ejconlon@gmail.com
+copyright:      (c) 2020 Eric Conlon
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+
+source-repository head
+  type: git
+  location: https://github.com/ejconlon/ref-extras
+
+library
+  exposed-modules:
+      Refextras.Main
+  other-modules:
+      Paths_ref_extras
+  hs-source-dirs:
+      src
+  default-extensions: ConstraintKinds DataKinds DeriveFunctor DeriveFoldable DeriveGeneric DeriveTraversable FlexibleContexts FlexibleInstances FunctionalDependencies GADTs GeneralizedNewtypeDeriving KindSignatures LambdaCase MultiParamTypeClasses MultiWayIf NoImplicitPrelude OverloadedStrings Rank2Types TemplateHaskell TupleSections TypeApplications TypeFamilies
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wpartial-fields -Wredundant-constraints -fno-warn-unused-top-binds
+  build-depends:
+      base >=4.12 && <5
+  default-language: Haskell2010
+
+executable ref-extras-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_ref_extras
+  hs-source-dirs:
+      app
+  default-extensions: ConstraintKinds DataKinds DeriveFunctor DeriveFoldable DeriveGeneric DeriveTraversable FlexibleContexts FlexibleInstances FunctionalDependencies GADTs GeneralizedNewtypeDeriving KindSignatures LambdaCase MultiParamTypeClasses MultiWayIf NoImplicitPrelude OverloadedStrings Rank2Types TemplateHaskell TupleSections TypeApplications TypeFamilies
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wpartial-fields -Wredundant-constraints -fno-warn-unused-top-binds -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.12 && <5
+    , ref-extras
+  default-language: Haskell2010
+
+test-suite ref-extras-test
+  type: exitcode-stdio-1.0
+  main-is: Tasty.hs
+  other-modules:
+      Test.Refextras.SimpleTest
+      Paths_ref_extras
+  hs-source-dirs:
+      test
+  default-extensions: ConstraintKinds DataKinds DeriveFunctor DeriveFoldable DeriveGeneric DeriveTraversable FlexibleContexts FlexibleInstances FunctionalDependencies GADTs GeneralizedNewtypeDeriving KindSignatures LambdaCase MultiParamTypeClasses MultiWayIf NoImplicitPrelude OverloadedStrings Rank2Types TemplateHaskell TupleSections TypeApplications TypeFamilies
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wpartial-fields -Wredundant-constraints -fno-warn-unused-top-binds -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.12 && <5
+    , ref-extras
+    , tasty
+    , tasty-discover
+    , tasty-hunit
+  default-language: Haskell2010
