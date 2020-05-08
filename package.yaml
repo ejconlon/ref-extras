@@ -5,6 +5,8 @@ license:             BSD3
 author:              "Eric Conlon"
 maintainer:          "ejconlon@gmail.com"
 copyright:           "(c) 2020 Eric Conlon"
+category:            Data
+synopsis:            Extra stuff for mutable references
 
 extra-source-files:
 - README.md

@@ -4,11 +4,13 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 0cfc50aa85ac69adcaaffd166404f85b8f518ad8572a1a98bfd006a02c23b08b
+-- hash: 9e81744739214454e5314bea860635661caf7b4f4296bb4c6f873e105c986c45
 
 name:           ref-extras
 version:        0.1.0
+synopsis:       Extra stuff for mutable references
 description:    Please see the README on GitHub at <https://github.com/ejconlon/ref-extras#readme>
+category:       Data
 homepage:       https://github.com/ejconlon/ref-extras#readme
 bug-reports:    https://github.com/ejconlon/ref-extras/issues
 author:         Eric Conlon
