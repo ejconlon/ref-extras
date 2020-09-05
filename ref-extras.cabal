@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: b78cee9ccbdfae871805c82ae7b2cf1fd51d2cd2670c9700b51d38f88ddd0fa7
+-- hash: b9a615ad370284799172b41317daac33b8bcecdcf7411334176b94d2d7105985
 
 name:           ref-extras
 version:        0.2.0
@@ -34,6 +34,7 @@ library
       RefExtras.LensRef
       RefExtras.Memo
       RefExtras.SomeRef
+      RefExtras.UVar
       RefExtras.XVar
   other-modules:
       Paths_ref_extras
