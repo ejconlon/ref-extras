@@ -11,7 +11,7 @@ import Control.Monad.IO.Unlift (MonadUnliftIO)
 import RefExtras.Classes (AtomicRef, atomicModifyRef, readRef)
 import RefExtras.XVar (XVar, atomicModifyXVarM)
 
--- Conditionally updates an AtomicRef. First reads the value with the prepare function, which
+-- | Conditionally updates an AtomicRef. First reads the value with the prepare function, which
 -- chooses to write with the commit function or chooses to return. This function allows you to
 -- sequence a read, some effectful operation, and an optional write, all with the caveat that
 -- the ref may have changed between the read and the write.
@@ -23,7 +23,7 @@ checkEffectRef ref prepare commit = do
     Left b -> atomicModifyRef ref (commit b)
     Right c -> pure c
 
--- checkEffectRef but locking around the effectful prepare function. You will block for the duration
+-- | checkEffectRef but locking around the effectful prepare function. You will block for the duration
 -- of the prepare and commit functions but are guaranteed that the var does not change in the
 -- meantime.
 checkEffectXVar :: MonadUnliftIO m => XVar a -> (a -> m (Either x b)) -> (x -> a -> (a, b)) -> m b
@@ -33,7 +33,7 @@ checkEffectXVar ref prepare commit = atomicModifyXVarM ref $ \a -> do
     Left b -> pure (commit b a)
     Right c -> pure (a, c)
 
--- The two prepare and commit functions packaged up.
+-- | The two prepare and commit functions packaged up.
 data CheckEffect m a b where
   CheckEffect :: !(a -> m (Either x b)) -> !(x -> a -> (a, b)) -> CheckEffect m a b
 

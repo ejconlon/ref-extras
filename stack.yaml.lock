@@ -5,15 +5,15 @@
 
 packages:
 - completed:
-    hackage: little-rio-0.1.1@sha256:a53f09f3559ba00bd4e7b88c9a4eb07b827b074f3084c431d1f971d21b8e3c4d,1312
+    hackage: little-rio-0.2.1@sha256:15d99ecb79bcb7e37f7dc35654a69bb99b2792434bd6622b5e4a5580a345b6b7,1406
     pantry-tree:
       size: 259
-      sha256: 9e894da96eaaafd29eca1ec24ad8f1e753d0a83e5c61fbb5eeef125a150fe1e8
+      sha256: f8ae47082ae2ef038b0a711f90b3ee2504ef2aa2542f68f3b420da0a05175f58
   original:
-    hackage: little-rio-0.1.1
+    hackage: little-rio-0.2.1
 snapshots:
 - completed:
-    size: 531674
-    url: https://raw.githubusercontent.com/commercialhaskell/stackage-snapshots/master/lts/16/2.yaml
-    sha256: 4b08fb9338ca297de7ade8318f4be1216f14dff8c0426c001fb7886ee88cb84a
-  original: lts-16.2
+    size: 532377
+    url: https://raw.githubusercontent.com/commercialhaskell/stackage-snapshots/master/lts/16/12.yaml
+    sha256: f914cfa23fef85bdf895e300a8234d9d0edc2dbec67f4bc9c53f85867c50eab6
+  original: lts-16.12
